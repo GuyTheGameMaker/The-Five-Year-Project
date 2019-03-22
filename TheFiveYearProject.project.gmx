@@ -4,10 +4,29 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
-  <sprites name="sprites"/>
+  <sounds name="sound">
+    <sound>sound\music_end</sound>
+    <sound>sound\music_start</sound>
+  </sounds>
+  <sprites name="sprites">
+    <sprite>sprites\Lotem_idle</sprite>
+    <sprite>sprites\Lotem_jump</sprite>
+    <sprite>sprites\Lotem_walk</sprite>
+    <sprite>sprites\spr_wall</sprite>
+  </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\Animate.gml</script>
+    <script>scripts\SetMovement.gml</script>
+  </scripts>
+  <objects name="objects">
+    <object>objects\Lotem</object>
+    <object>objects\obj_wall</object>
+  </objects>
+  <rooms name="rooms">
+    <room>rooms\room1</room>
+  </rooms>
   <help>
     <rtf>help.rtf</rtf>
   </help>
