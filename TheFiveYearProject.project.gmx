@@ -9,21 +9,33 @@
     <sound>sound\music_start</sound>
   </sounds>
   <sprites name="sprites">
-    <sprite>sprites\Lotem_idle</sprite>
-    <sprite>sprites\Lotem_jump</sprite>
-    <sprite>sprites\Lotem_walk</sprite>
     <sprite>sprites\spr_wall</sprite>
+    <sprites name="lotem">
+      <sprite>sprites\Lotem_idle</sprite>
+      <sprite>sprites\Lotem_jump</sprite>
+      <sprite>sprites\Lotem_walk</sprite>
+      <sprite>sprites\sprite14</sprite>
+    </sprites>
+    <sprites name="guy">
+      <sprite>sprites\guy_idle</sprite>
+      <sprite>sprites\guy_jump</sprite>
+      <sprite>sprites\guy_walk</sprite>
+      <sprite>sprites\guy_hurt</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\Animate.gml</script>
     <script>scripts\SetMovement.gml</script>
+    <script>scripts\EndAnimation.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\Lotem</object>
     <object>objects\obj_wall</object>
+    <object>objects\Guy</object>
   </objects>
+  <timelines name="timelines"/>
   <rooms name="rooms">
     <room>rooms\room1</room>
   </rooms>
