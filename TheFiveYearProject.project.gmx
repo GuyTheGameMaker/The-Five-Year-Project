@@ -22,6 +22,10 @@
       <sprite>sprites\guy_walk</sprite>
       <sprite>sprites\guy_hurt</sprite>
     </sprites>
+    <sprites name="Laundry">
+      <sprite>sprites\spr_laundry</sprite>
+      <sprite>sprites\spr_basket</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -29,14 +33,18 @@
     <script>scripts\Animate.gml</script>
     <script>scripts\SetMovement.gml</script>
     <script>scripts\EndAnimation.gml</script>
+    <script>scripts\choose_different.gml</script>
+    <script>scripts\GameOver.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\Lotem</object>
     <object>objects\obj_wall</object>
     <object>objects\Guy</object>
+    <object>objects\obj_laundry</object>
+    <object>objects\obj_laundry_score</object>
   </objects>
-  <timelines name="timelines"/>
   <rooms name="rooms">
+    <room>rooms\rm_laundry</room>
     <room>rooms\room1</room>
   </rooms>
   <help>

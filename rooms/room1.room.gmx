@@ -52,7 +52,6 @@
   </views>
   <instances>
     <instance objName="obj_wall" x="64" y="96" name="inst_82B90C40" locked="0" code="" scaleX="1" scaleY="16.5161285400391" colour="4294967295" rotation="0"/>
-    <instance objName="Lotem" x="512" y="480" name="inst_9AC37963" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="1472" y="320" name="inst_B0D068B5" locked="0" code="" scaleX="7" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_wall" x="64" y="608" name="inst_0248DB59" locked="0" code="" scaleX="122" scaleY="8" colour="4294967295" rotation="0"/>
   </instances>

@@ -35,7 +35,7 @@ LotemAnimations[0]=Lotem_idle;
 LotemAnimations[1]=Lotem_walk;
 LotemAnimations[2]=Lotem_jump;
 
-image_speed=0.5;
+image_speed=0.1;
 </string>
           </argument>
         </arguments>
@@ -63,6 +63,8 @@ image_speed=0.5;
 SetMovement();
 
 Animate(LotemAnimations);
+
+
 </string>
           </argument>
         </arguments>
@@ -85,17 +87,13 @@ Animate(LotemAnimations);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (sprite_index==LotemAnimations[0]) //if walking
+            <string>if (sprite_index==LotemAnimations[0]) //if standing
 {
 image_speed=0;
 image_index=image_number-1;
 }
 
-if (sprite_index==LotemAnimations[2]) //if jumping
-{
-if (image_index==11)
-image_speed=0;
-}
+
 </string>
           </argument>
         </arguments>
