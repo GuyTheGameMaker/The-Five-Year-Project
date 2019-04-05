@@ -3,7 +3,7 @@
   <spriteName>spr_laundry</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-1000</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -71,7 +71,58 @@ basket_white[1]="W";
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>instance_create(x,y,obj_laundry);
+            <string>with (obj_laundry_score)
+{
+alarm[0]=60;
+}
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>image_xscale*=0.5;
+image_yscale*=0.5;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>instance_destroy();
 </string>
           </argument>
         </arguments>
@@ -102,22 +153,25 @@ if keyboard_check_pressed(ord('B'))
 {
 global.blue_score++;
 lastcolor=0;
-keyboard_key=0;
-instance_destroy();
+hspeed=-4.3;
+vspeed=-3;
+alarm[0]=60;
 
 }
-else GameOver();
+else if (keyboard_check_pressed(vk_anykey))  GameOver();
 }
 else if basket_red[0]==CurrentItem[0]
 {
 if keyboard_check_pressed(ord('R'))
 {
-alarm[0]=120;
 global.red_score++;
 lastcolor=1;
-instance_destroy();
+hspeed=-2;
+vspeed=-3
+alarm[0]=60;
+
 }
-else GameOver();
+else if (keyboard_check_pressed(vk_anykey)) GameOver();
 }
 
 else if basket_dark[0]==CurrentItem[0]
@@ -126,9 +180,10 @@ if keyboard_check_pressed(ord('D'))
 {
 global.dark_score++;
 lastcolor=2;
-instance_destroy();
+vspeed=-3;
+alarm[0]=60;
 }
-else GameOver();
+else if (keyboard_check_pressed(vk_anykey)) GameOver();
 }
 
 else if basket_white[0]==CurrentItem[0]
@@ -137,9 +192,11 @@ if keyboard_check_pressed(ord('W'))
 {
 global.white_score++;
 lastcolor=3;
-instance_destroy();
+hspeed=2.5;
+vspeed=-3;
+alarm[0]=60;
 }
-else GameOver();
+else if (keyboard_check_pressed(vk_anykey))  GameOver();
 }
 }
 </string>

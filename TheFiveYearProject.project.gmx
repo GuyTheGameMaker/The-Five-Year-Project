@@ -32,7 +32,6 @@
   <scripts name="scripts">
     <script>scripts\Animate.gml</script>
     <script>scripts\SetMovement.gml</script>
-    <script>scripts\EndAnimation.gml</script>
     <script>scripts\choose_different.gml</script>
     <script>scripts\GameOver.gml</script>
   </scripts>
